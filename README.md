@@ -9,6 +9,7 @@ A cute pixel-art themed calculator built using HTML, CSS, and JavaScript. Inspir
 - Responsive design
 - Pixel-art inspired interface
 - Cute cat-themed UI
+- Meow sound effect when clicking the cat and the paw print
 - Interactive button effects
 - Clean and user-friendly layout
 
