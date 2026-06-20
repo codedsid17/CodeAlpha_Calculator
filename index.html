@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <div class="calculator-wrapper">
+
+            <div class="hearts-container">
+                <svg class="floating-heart heart-left" viewBox="0 0 16 16" width="20" height="20">
+                    <path
+                        d="M 4 2 L 6 2 L 6 4 L 8 4 L 8 2 L 10 2 L 10 4 L 12 4 L 12 6 L 14 6 L 14 10 L 12 10 L 12 12 L 10 12 L 10 14 L 8 14 L 8 16 L 6 16 L 6 14 L 4 14 L 4 12 L 2 12 L 2 10 L 0 10 L 0 6 L 2 6 L 2 4 L 4 4 Z"
+                        fill="#5D4037" />
+                    <path
+                        d="M 4 4 L 6 4 L 6 6 L 8 6 L 8 4 L 10 4 L 10 6 L 12 6 L 12 8 L 10 8 L 10 10 L 8 10 L 8 12 L 6 12 L 6 10 L 4 10 L 4 8 L 2 8 L 2 6 L 4 6 Z"
+                        fill="#FFB74D" />
+                </svg>
+                <svg class="floating-heart heart-right-1" viewBox="0 0 16 16" width="18" height="18">
+                    <path
+                        d="M 4 2 L 6 2 L 6 4 L 8 4 L 8 2 L 10 2 L 10 4 L 12 4 L 12 6 L 14 6 L 14 10 L 12 10 L 12 12 L 10 12 L 10 14 L 8 14 L 8 16 L 6 16 L 6 14 L 4 14 L 4 12 L 2 12 L 2 10 L 0 10 L 0 6 L 2 6 L 2 4 L 4 4 Z"
+                        fill="#5D4037" />
+                    <path
+                        d="M 4 4 L 6 4 L 6 6 L 8 6 L 8 4 L 10 4 L 10 6 L 12 6 L 12 8 L 10 8 L 10 10 L 8 10 L 8 12 L 6 12 L 6 10 L 4 10 L 4 8 L 2 8 L 2 6 L 4 6 Z"
+                        fill="#FF8A80" />
+                </svg>
+                <svg class="floating-heart heart-right-2" viewBox="0 0 16 16" width="16" height="16">
+                    <path
+                        d="M 4 2 L 6 2 L 6 4 L 8 4 L 8 2 L 10 2 L 10 4 L 12 4 L 12 6 L 14 6 L 14 10 L 12 10 L 12 12 L 10 12 L 10 14 L 8 14 L 8 16 L 6 16 L 6 14 L 4 14 L 4 12 L 2 12 L 2 10 L 0 10 L 0 6 L 2 6 L 2 4 L 4 4 Z"
+                        fill="#5D4037" />
+                    <path
+                        d="M 4 4 L 6 4 L 6 6 L 8 6 L 8 4 L 10 4 L 10 6 L 12 6 L 12 8 L 10 8 L 10 10 L 8 10 L 8 12 L 6 12 L 6 10 L 4 10 L 4 8 L 2 8 L 2 6 L 4 6 Z"
+                        fill="#FF5252" />
+                </svg>
+                <div class="sparkle sparkle-1">+</div>
+                <div class="sparkle sparkle-2">+</div>
+            </div>
+            <div class="peeking-cat" id="peekingCat">
+                <svg viewBox="0 0 26 22" width="110" height="93" shape-rendering="crispEdges">
+                    <path
+                        d="M 4 2 h 2 v 1 h -2 z M 3 3 h 1 v 2 h -1 z M 2 5 h 1 v 4 h -1 z M 6 3 h 2 v 2 h -2 z M 8 5 h 10 v 1 h -10 z M 18 3 h 2 v 2 h -2 z M 20 3 h 1 v 2 h -1 z M 21 5 h 1 v 4 h -1 z M 22 3 h 2 v 1 h -2 z Z"
+                        fill="#201815" />
+                    <path
+                        d="M 2 9 h 22 v 1 h -22 z M 2 10 h 1 v 4 h -1 z M 23 10 h 1 v 4 h -1 z M 3 14 h 20 v 1 h -20 z M 4 15 h 18 v 1 h -18 z"
+                        fill="#201815" />
+
+                    <path
+                        d="M 3 5 h 5 v 4 h -5 z M 18 5 h 5 v 4 h -5 z M 8 6 h 10 v 8 h -10 z M 3 10 h 20 v 4 h -20 z M 4 14 h 18 v 1 h -18 z"
+                        fill="#FFFFFF" />
+
+                    <path
+                        d="M 4 3 h 2 v 2 h -2 z M 3 5 h 1 v 4 h -1 z M 4 5 h 1 v 2 h -1 z M 20 3 h 2 v 2 h -2 z M 22 5 h 1 v 4 h -1 z M 21 5 h 1 v 2 h -1 z"
+                        fill="#B8864D" />
+
+                    <path d="M 12 5 h 2 v 4 h -2 z" fill="#5C3D2E" />
+
+                    <rect x="5" y="5" width="2" height="2" fill="#F4C9C9" />
+                    <rect x="19" y="5" width="2" height="2" fill="#F4C9C9" />
+
+                    <g id="leftEye">
+                        <rect x="7" y="9" width="2" height="2" fill="#201815" />
+                    </g>
+                    <g id="rightEye">
+                        <rect x="17" y="9" width="2" height="2" fill="#201815" />
+                    </g>
+
+                    <rect x="5" y="11" width="3" height="2" fill="#FF8F9F" />
+                    <rect x="18" y="11" width="3" height="2" fill="#FF8F9F" />
+
+                    <rect x="12" y="10" width="2" height="1" fill="#201815" />
+
+                    <path d="M 11 11 h 4 v 2 h -4 z" fill="#201815" />
+                    <rect x="12" y="11" width="2" height="1" fill="#FFFFFF" />
+
+                    <rect x="5" y="16" width="1" height="2" fill="#201815" />
+                    <rect x="9" y="16" width="1" height="2" fill="#201815" />
+                    <rect x="6" y="18" width="1" height="1" fill="#201815" />
+                    <rect x="8" y="18" width="1" height="1" fill="#201815" />
+                    <rect x="7" y="19" width="1" height="1" fill="#201815" />
+
+                    <rect x="6" y="16" width="3" height="2" fill="#FFFFFF" />
+                    <rect x="7" y="18" width="1" height="1" fill="#FFFFFF" />
+
+                    <rect x="7" y="17" width="1" height="1" fill="#F4C9C9" />
+
+                    <rect x="16" y="16" width="1" height="2" fill="#201815" />
+                    <rect x="20" y="16" width="1" height="2" fill="#201815" />
+                    <rect x="17" y="18" width="1" height="1" fill="#201815" />
+                    <rect x="19" y="18" width="1" height="1" fill="#201815" />
+                    <rect x="18" y="19" width="1" height="1" fill="#201815" />
+
+                    <rect x="17" y="16" width="3" height="2" fill="#FFFFFF" />
+                    <rect x="18" y="18" width="1" height="1" fill="#FFFFFF" />
+
+                    <rect x="18" y="17" width="1" height="1" fill="#F4C9C9" />
+                </svg>
+            </div>
+
+            <div class="potted-plant">
+                <svg viewBox="0 0 24 24" width="85" height="85" shape-rendering="crispEdges">
+                    <path
+                        d="M 6 5 h 3 v 1 h -3 z M 5 6 h 1 v 4 h -1 z M 6 10 h 2 v 1 h -2 z M 8 11 h 8 v 1 h -8 z M 16 10 h 2 v 1 h -2 z M 18 6 h 1 v 4 h -1 z M 15 5 h 3 v 1 h -3 z"
+                        fill="#2D201E" />
+                    <path d="M 9 2 h 6 v 1 h -6 z M 8 3 h 1 v 2 h -1 z M 15 3 h 1 v 2 h -1 z M 10 5 h 4 v 1 h -4 z"
+                        fill="#2D201E" />
+                    <rect x="10" y="3" width="4" height="2" fill="#94BF55" />
+                    <rect x="11" y="4" width="2" height="1" fill="#60993E" />
+                    <path d="M 6 6 h 4 v 4 h -4 z" fill="#60993E" />
+                    <path d="M 7 6 h 2 v 2 h -2 z" fill="#94BF55" />
+                    <path d="M 6 9 h 2 v 1 h -2 z" fill="#31681D" />
+
+                    <path d="M 14 6 h 4 v 4 h -4 z" fill="#60993E" />
+                    <path d="M 15 6 h 2 v 2 h -2 z" fill="#94BF55" />
+                    <path d="M 16 9 h 2 v 1 h -2 z" fill="#31681D" />
+
+                    <rect x="9" y="6" width="6" height="5" fill="#31681D" />
+                    <rect x="10" y="6" width="4" height="3" fill="#60993E" />
+                    <rect x="11" y="6" width="2" height="1" fill="#94BF55" />
+
+                    <rect x="5" y="12" width="14" height="3" fill="#2D201E" />
+                    <rect x="6" y="13" width="6" height="1" fill="#CE9A71" />
+                    <rect x="12" y="13" width="6" height="1" fill="#A07351" />
+
+                    <path
+                        d="M 6 15 h 12 v 1 h -12 z M 6 16 h 1 v 5 h -1 z M 17 16 h 1 v 5 h -1 z M 7 21 h 10 v 1 h -10 z"
+                        fill="#2D201E" />
+
+                    <path d="M 7 16 h 5 v 5 h -5 z" fill="#CF9B72" />
+                    <path d="M 12 16 h 5 v 5 h -5 z" fill="#A17452" />
+                    <rect x="10" y="17" width="2" height="1" fill="#EBD0B9" />
+                    <rect x="9" y="19" width="2" height="1" fill="#EBD0B9" />
+                    <rect x="13" y="18" width="2" height="1" fill="#CF9B72" />
+                    <rect x="14" y="20" width="2" height="1" fill="#CF9B72" />
+                </svg>
+            </div>
+
+            <div class="calculator-body">
+                <div class="calculator-screen-wrapper">
+                    <div class="calculator-screen">
+                        <div class="screen-formula" id="screenFormula">123 + 456</div>
+                        <div class="screen-value-container">
+                            <span class="screen-value" id="screenValue">579</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calculator-grid">
+                    <button class="calc-btn function-btn" data-key="clear">AC</button>
+                    <button class="calc-btn function-btn" data-key="backspace">
+                        <svg viewBox="0 0 24 24" width="20" height="20" style="display: block; margin: auto;">
+                            <path d="M 22 6 L 10 6 L 4 12 L 10 18 L 22 18 Z" fill="none" stroke="#5D4037"
+                                stroke-width="2" stroke-linejoin="round" />
+                            <path d="M 12 9 L 16 13 M 16 9 L 12 13" stroke="#5D4037" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <button class="calc-btn function-btn" data-key="%">%</button>
+                    <button class="calc-btn operator-btn" data-key="/">&divide;</button>
+                    <button class="calc-btn number-btn" data-key="7">7</button>
+                    <button class="calc-btn number-btn" data-key="8">8</button>
+                    <button class="calc-btn number-btn" data-key="9">9</button>
+                    <button class="calc-btn operator-btn" data-key="*">&times;</button>
+                    <button class="calc-btn number-btn" data-key="4">4</button>
+                    <button class="calc-btn number-btn" data-key="5">5</button>
+                    <button class="calc-btn number-btn" data-key="6">6</button>
+                    <button class="calc-btn operator-btn" data-key="-">-</button>
+                    <button class="calc-btn number-btn" data-key="1">1</button>
+                    <button class="calc-btn number-btn" data-key="2">2</button>
+                    <button class="calc-btn number-btn" data-key="3">3</button>
+                    <button class="calc-btn operator-btn" data-key="+">+</button>
+                    <button class="calc-btn number-btn double-width" data-key="0">0</button>
+                    <button class="calc-btn number-btn" data-key=".">.</button>
+                    <button class="calc-btn operator-btn equal-btn" data-key="=">=</button>
+                </div>
+            </div>
+
+            <div class="corner-paw" id="cornerPaw">
+                <svg viewBox="0 0 16 16" width="60" height="60" shape-rendering="crispEdges">
+                    <path
+                        d="M 5 2 h 2 v 1 h -2 z M 9 2 h 2 v 1 h -2 z M 2 5 h 2 v 1 h -2 z M 12 5 h 2 v 1 h -2 z M 4 7 h 8 v 1 h -8 z M 3 8 h 10 v 1 h -10 z M 2 9 h 12 v 5 h -12 z M 3 14 h 10 v 1 h -10 z M 5 15 h 6 v 1 h -6 z"
+                        fill="#5D4037" />
+
+                    <path
+                        d="M 5 3 h 2 v 1 h -2 z M 9 3 h 2 v 1 h -2 z M 2 6 h 2 v 1 h -2 z M 12 6 h 2 v 1 h -2 z M 5 7 h 6 v 1 h -6 z M 4 8 h 8 v 1 h -8 z M 3 9 h 10 v 5 h -10 z M 4 14 h 8 v 1 h -8 z"
+                        fill="#FFFDF9" />
+
+                    <rect x="5" y="3" width="2" height="2" fill="#F19CBB" />
+                    <rect x="5" y="3" width="1" height="1" fill="#FFCCE0" />
+                    <rect x="6" y="4" width="1" height="1" fill="#CD7390" />
+
+                    <rect x="9" y="3" width="2" height="2" fill="#F19CBB" />
+                    <rect x="9" y="3" width="1" height="1" fill="#FFCCE0" />
+                    <rect x="10" y="4" width="1" height="1" fill="#CD7390" />
+
+                    <rect x="2" y="6" width="2" height="2" fill="#F19CBB" />
+                    <rect x="2" y="6" width="1" height="1" fill="#FFCCE0" />
+                    <rect x="3" y="7" width="1" height="1" fill="#CD7390" />
+
+                    <rect x="12" y="6" width="2" height="2" fill="#F19CBB" />
+                    <rect x="12" y="6" width="1" height="1" fill="#FFCCE0" />
+                    <rect x="13" y="7" width="1" height="1" fill="#CD7390" />
+
+                    <path d="M 6 9 h 4 v 4 h -4 z M 5 10 h 6 v 2 h -6 z M 7 13 h 2 v 1 h -2 z" fill="#F19CBB" />
+                    <path d="M 6 9 h 2 v 1 h -2 z M 5 10 h 1 v 1 h -1 z" fill="#FFCCE0" />
+                    <path d="M 9 12 h 2 v 1 h -2 z M 8 13 h 1 v 1 h -1 z M 10 11 h 1 v 1 h -1 z" fill="#CD7390" />
+                </svg>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
